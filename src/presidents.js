@@ -450,7 +450,7 @@ function countYearsInOffice(presidents) {
     if (president.leftOffice !== null) {
       return totalYears + (president.leftOffice - president.tookOffice);
     }
-    return totalYears;
+    else {return totalYears;}
   }, 0);
 }
 
@@ -499,10 +499,19 @@ function getPresidentsBornAfter(presidentsArr, year) {
 console.log( getPresidentsBornAfter(presidents, 1945) );
 
 
-
 // Bonus: Iteration 7 | Count Republican Presidents
-function countRepublicanPresidents(presidentsArr) {}
+function countRepublicanPresidents(presidentsArr) {
+  return presidentsArr.reduce((acc, eachPresident) => {
+    if (eachPresident.party === "Republican") {
+      return acc + 1;
+    }else {
+      return acc;
+    }
 
+  }, 0);
+}
+
+console.log( countRepublicanPresidents(presidents) );
 
 
 

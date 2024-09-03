@@ -419,13 +419,27 @@ const presidents = [
 
 
 // Iteration 1 | Names of All Presidents - `map()`
-function getNames(presidentsArr) {}
+function getNames(presidentsArr) {
+  let result = presidentsArr.map((eachElement) => {
+    return eachElement.name;
+  });
+  return result;
+}
 
 
 
 
 // Iteration 2 | Democratic Presidents - `filter()`
-function getDemocraticPresidents(presidentsArr) {}
+function getDemocraticPresidents(presidentsArr) {
+  let result = presidentsArr.filter((eachElement)=>{
+    if(eachElement.party === "Democratic"){
+      return true;
+    }else {
+      return false;
+    }
+  });
+  return result;
+}
 
 
 
